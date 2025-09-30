@@ -1,0 +1,82 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+
+ *{
+    box-sizing: border-box;
+}
+
+.text {
+    background-color: skyblue;
+    max-width: 600px;
+    text-align: left;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+html, body {
+    font-size: 16px;
+    font-family: Helvetica;
+    color: black; 
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px black;
+    padding-bottom: 5px;
+}
+
+.subhead{
+    font-size: 1em;
+    color: black;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+
+/* Tablet/Desktop */
+@media(min-width: 681px) {
+    .text {
+        padding: 30px;
+    }
+}
+
+@media(min-width: 729px) {
+    .text {
+        max-width: 800px;
+    }
+}
+
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
